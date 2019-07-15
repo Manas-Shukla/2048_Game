@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>2048</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body onload="loadgame()" >
+    
+    <div class = 'container'>
+        <div class = 'row'>
+            
+            <div class="Bestscore col-sm-4 ">
+                BestScore<p id ='bestscore'></p>
+            </div>
+            
+            <div class="Score col-sm-4 ">
+                    Score<p id ='score'></p>
+            </div>
+            
+            <div class="Timer col-sm-4">
+                    Time Elapsed<p id ='timer'></p>
+            </div>
+
+        </div>
+
+        <div class = 'ButtonHeader row'>
+            <button type="button" class="btn btn-primary col-sm-4"  id= 'newGame' >New Game</button>
+            <h2 class='col-sm-4' id='enjoy' >Enjoy the game </h2>
+            <button type="button" class="btn btn-primary col-sm-4"id='undo'  >Undo</button>
+        </div>
+
+        <div class="container" id='grid' style="position: relative;width:500px;height:500px;border:2px solid #000;background-color:coral">
+                
+        </div>
+        
+        <div class = 'row' style="background-color: cadetblue">
+            
+            <div class="nextMoveHead col-sm-3 ">
+                <span style="color:white">Next Three Moves will be </span>
+            </div>
+            
+            <div class="move col-sm-3 ">
+                    <p id ='m1' style="color:white;font-size: 20px">Move1</p>
+            </div>
+            
+            <div class="move col-sm-3">
+                    <p id ='m2' style="color:white;font-size: 20px">Move2</p>
+            </div>
+            <div class="move col-sm-3">
+                    <p id ='m3' style="color:white;font-size: 20px">Move3</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    
+
+</body>
+<script src='Cell.js'></script>
+<script src='GridController.js'></script>
+<script src='UIController.js'></script>
+<script src='Score.js'></script>
+<script src='ScoreRepo.js'></script>
+<script src='Clock.js'></script>
+<script src='gameLogic.js'></script>
+
+</html>
